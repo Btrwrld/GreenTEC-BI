@@ -1,0 +1,429 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="70861318-a5ff-4761-8b87-95420cb26a6f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DW_GreenTEC</ID>
+  <Name>DW_GreenTEC</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="d9767619-d0a3-4b9f-b4cb-3c2c57fad773">
+      <ID>F_Balance</ID>
+      <Name>F_Balance</Name>
+      <DimensionID>F_Balance</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="997af15b-a7dd-443d-b8b3-bd40a1f5a2b9">
+          <AttributeID>idBalance</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5cbf2306-bf49-47d8-8cd3-1f63012845a4">
+          <AttributeID>enterpriseNetIncome</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d908c79c-6261-4185-aa87-59c3ec581bc7">
+          <AttributeID>enterpriseCost</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1c2025b9-bf5b-46e7-b24b-1ae9bf9516de">
+          <AttributeID>parkAreaDayNetIncome</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d4bb4e8-0e0e-4b86-a765-2ad16c8b40d1">
+          <AttributeID>parkMantainanceCost</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6de5c206-757c-4b25-8ce9-58c82af72c24">
+          <AttributeID>excursionNetIncome</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="54f35019-bc6b-4868-b1a9-2c88157df289">
+          <AttributeID>excursionCost</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="35293a69-e716-4d35-bc02-a048ff830518">
+          <AttributeID>employeeExcursionIncome</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="92af5ff1-bd5d-4893-b095-cb679d51f1a2">
+          <AttributeID>employeeAccomodationIncome</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e827916e-bb0f-4d0e-b360-75058e32c92e">
+          <AttributeID>employeeCost</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="623cb759-d875-40ca-af4f-661bb927dd94">
+          <AttributeID>idTime</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1ab8b5ab-cfa7-44bd-a071-974a9e350a20">
+          <AttributeID>idEmployee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="214fff75-5472-4e3f-8669-98c88b6e9944">
+          <AttributeID>idExcursion</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="956b53e3-9f66-44d2-8f78-5e91e0909669">
+          <AttributeID>idEnterprise</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="73a39e59-9a20-4f90-aaf9-ed996baf499f">
+          <AttributeID>idPark</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ec8bbb32-32c5-41f1-9725-f3f622b0c4bc">
+      <ID>D_Time</ID>
+      <Name>D_Time</Name>
+      <DimensionID>D_Time</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ccd89481-2330-4e0b-9c5a-6d7e5c36b19b">
+          <AttributeID>idTime</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="63a8e090-937d-4e97-84ce-8db3a5764449">
+          <AttributeID>dayName</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="61382b3e-1fe6-466b-9772-8e6eb573be4e">
+          <AttributeID>day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fc00c179-307f-47a4-bdc1-2ee5c58adc47">
+          <AttributeID>month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3546a7c1-0435-46e5-b899-d9c243a44b8c">
+          <AttributeID>trimester</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1b9a8b03-9243-44ce-b8d2-cbe1d68563ea">
+          <AttributeID>year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cd9a6f9e-446a-4964-b698-fe874ccad79a">
+          <AttributeID>monthName</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a6a263b8-38a2-40d3-8d95-d4759fcdee6d">
+      <ID>D_Employee</ID>
+      <Name>D_Employee</Name>
+      <DimensionID>D_Employee</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8dd78c6e-c017-4b16-8afc-879c99bfe5cd">
+          <AttributeID>idEmployee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7338b1db-f4ca-4704-ba84-fa288bb0f3fb">
+          <AttributeID>employeeName</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c75e6a7c-7933-4d96-9df6-265de5ffa04a">
+      <ID>D_Excursion</ID>
+      <Name>D_Excursion</Name>
+      <DimensionID>D_Excursion</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="952ea634-e69a-4b31-8182-369f25e77240">
+          <AttributeID>idExcursion</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a05cc047-7f29-4ed6-84c5-151cc8c6470a">
+          <AttributeID>excursionName</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="75a8ebdb-68d8-4418-978b-234f2fd17baf">
+      <ID>D_Enterprise</ID>
+      <Name>D_Enterprise</Name>
+      <DimensionID>D_Enterprise</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b1909408-c51e-45d3-b4e6-e7cb154487bc">
+          <AttributeID>idEnterprise</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a64dfd2f-c68b-46c4-a175-e5f65254084e">
+          <AttributeID>enterpriseName</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c7be99a9-7437-4a5d-967b-86ba3cc8423d">
+          <AttributeID>utilities</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="21c4fce6-6d0c-4cca-8704-5e5e337800bf">
+      <ID>D_Park</ID>
+      <Name>D_Park</Name>
+      <DimensionID>D_Park</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="189de807-8794-49cb-8d50-0686c39764ee">
+          <AttributeID>idPark</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="484198eb-3471-4143-bff2-b00dbfa13a49">
+          <AttributeID>parkName</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0f337ae0-1c6b-425a-959e-aaddccae2992">
+          <AttributeID>area</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="eb72315d-d1cd-4c72-809d-5c1b13638521">
+      <ID>F Balance</ID>
+      <Name>F Balance</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="4ffaf416-7e4e-4acc-981f-83ef20ba566d">
+          <ID>Enterprise Net Income</ID>
+          <Name>Enterprise Net Income</Name>
+          <Source dwd:design-time-name="ea24bc6a-b840-4b4e-9c1b-beb59aacc873">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a84edf4b-b19a-40ee-b862-aff7b65272a1">
+              <TableID>dbo_F_Balance</TableID>
+              <ColumnID>enterpriseNetIncome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="10bb4ec8-3e49-4f08-b1fd-72a5494371ce">
+          <ID>Enterprise Cost</ID>
+          <Name>Enterprise Cost</Name>
+          <Source dwd:design-time-name="68760977-a792-4f51-ad2a-1130e354657f">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="df2dbb41-b15d-47db-850c-e7e6360997ed">
+              <TableID>dbo_F_Balance</TableID>
+              <ColumnID>enterpriseCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a4e66830-572e-4f13-88ea-58105ebdfe09">
+          <ID>Park Area Day Net Income</ID>
+          <Name>Park Area Day Net Income</Name>
+          <Source dwd:design-time-name="71ab6c8e-e5c1-480d-a354-618a1a0fe1bb">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fc2dd7fa-2d21-46ab-ad88-056e79b34742">
+              <TableID>dbo_F_Balance</TableID>
+              <ColumnID>parkAreaDayNetIncome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7b071514-dc63-4dba-a832-25eee78d39d9">
+          <ID>Park Mantainance Cost</ID>
+          <Name>Park Mantainance Cost</Name>
+          <Source dwd:design-time-name="959c3b02-f69e-43d2-a695-2c9ee0365981">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="344b8495-f263-4d1a-bbfb-d3911be65727">
+              <TableID>dbo_F_Balance</TableID>
+              <ColumnID>parkMantainanceCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e87a5972-ff28-40f7-ba85-860f15950ba4">
+          <ID>Excursion Net Income</ID>
+          <Name>Excursion Net Income</Name>
+          <Source dwd:design-time-name="00c4c2d8-d2c6-4cf1-86be-c0d16d6979fa">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2f18ba49-6581-4970-bd3c-f12461cbcc63">
+              <TableID>dbo_F_Balance</TableID>
+              <ColumnID>excursionNetIncome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e64f6ef9-b2c1-4477-bea0-80446990c734">
+          <ID>Excursion Cost</ID>
+          <Name>Excursion Cost</Name>
+          <Source dwd:design-time-name="63b23c27-e1b6-491a-b143-cd1a31e8652b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="29bbbaf5-d22e-4895-802c-19b862f8e95d">
+              <TableID>dbo_F_Balance</TableID>
+              <ColumnID>excursionCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="29db46fc-6f90-42eb-8b65-d8c41dbe2312">
+          <ID>Employee Excursion Income</ID>
+          <Name>Employee Excursion Income</Name>
+          <Source dwd:design-time-name="e5a3ae87-42d9-43f5-97b4-279fb82ad14d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f5c3e5b5-b372-4a54-baa5-c1aab7b53622">
+              <TableID>dbo_F_Balance</TableID>
+              <ColumnID>employeeExcursionIncome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c08bb541-26df-4e61-b0eb-a1da5b305f0b">
+          <ID>Employee Accomodation Income</ID>
+          <Name>Employee Accomodation Income</Name>
+          <Source dwd:design-time-name="3cd6590e-ae04-409d-9197-5440f30eef0d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0efbe3dc-77eb-4c10-987d-f35a0419d449">
+              <TableID>dbo_F_Balance</TableID>
+              <ColumnID>employeeAccomodationIncome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2d141079-3e98-404d-ba03-398aad696ec1">
+          <ID>Employee Cost</ID>
+          <Name>Employee Cost</Name>
+          <Source dwd:design-time-name="1ef792da-1fc7-4dbb-b022-7f3212375ef7">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="288a87fa-bb1c-4545-bd30-ad30bdda41a7">
+              <TableID>dbo_F_Balance</TableID>
+              <ColumnID>employeeCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7318a422-b2a1-402c-b043-1b1733bbb495">
+          <ID>F Balance Count</ID>
+          <Name>F Balance Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d4533fb9-b17a-4cda-8367-7616cc3608c6">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="aa89c30d-c4c7-43cd-9089-6f224083c0b4">
+              <TableID>dbo_F_Balance</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="57262342-751d-459f-8362-25cad56b3dd5">
+          <CubeDimensionID>F_Balance</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="58076031-51ba-470b-aa4c-6a78535df947">
+              <AttributeID>idBalance</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="79f16df3-0b6a-4842-9a29-a0e613e20c0d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f73b6c04-b414-41f8-ab4b-e564ca550dab">
+                    <TableID>dbo_F_Balance</TableID>
+                    <ColumnID>idBalance</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e35a7dad-4a5c-4c91-9bea-5ef13faec907">
+          <CubeDimensionID>D_Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4b90211b-05fb-4144-a153-0bbf53a64843">
+              <AttributeID>idTime</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5b6181c0-b7ea-45c4-8a2b-d6a2fc283122">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="edec0f98-3eb0-4376-9ca4-d7b50f1fcb35">
+                    <TableID>dbo_F_Balance</TableID>
+                    <ColumnID>fk_idTime</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b95db8be-910c-4191-a192-62df6e93ee5a">
+          <CubeDimensionID>D_Employee</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="66c5a8c4-21a2-4bf1-ba80-2429f1bbba7f">
+              <AttributeID>idEmployee</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4ea8c4fb-a0e7-426b-a78c-8238247c8fcc">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="13ddaf2a-1dc4-4afa-bdeb-71648a85aca7">
+                    <TableID>dbo_F_Balance</TableID>
+                    <ColumnID>fk_idEmployee</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ba258d77-5f81-4827-a308-a2cfa4b53f39">
+          <CubeDimensionID>D_Excursion</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fa0ac743-01cd-44e5-9a2e-d2cb44ddafac">
+              <AttributeID>idExcursion</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="dd2ce95a-4add-448c-9377-8f908c38073a">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d7d761f3-2105-42b3-b335-cfdb93ce7061">
+                    <TableID>dbo_F_Balance</TableID>
+                    <ColumnID>fk_idExcursion</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a17e720a-f7bd-40d8-9353-2b5f16c1c0d1">
+          <CubeDimensionID>D_Enterprise</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fad6ce46-e841-4884-a7cb-4a1af8e6d031">
+              <AttributeID>idEnterprise</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="14ef2064-f6c0-458e-836b-8f547bb8345a">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="84da94c2-2601-4d44-a518-63654fb678a1">
+                    <TableID>dbo_F_Balance</TableID>
+                    <ColumnID>fk_idEnterprise</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="cc1cb96a-b9b7-41a4-9cb1-409e3a6d870b">
+          <CubeDimensionID>D_Park</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="117fb142-ce22-4757-91d1-a7225249d7fc">
+              <AttributeID>idPark</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="af374c58-9467-4c78-851f-fd23d5b28250">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="46323552-b07b-4f29-ba2e-f4b27997c96c">
+                    <TableID>dbo_F_Balance</TableID>
+                    <ColumnID>fk_idPark</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="9328a05f-0ae5-4b26-91ea-87979b29eb26">
+    <DataSourceViewID>DW_GreenTEC</DataSourceViewID>
+  </Source>
+</Cube>

@@ -1,0 +1,362 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="42b8e2d0-57c2-43c3-88fa-75a141d9153d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>F_Balance</ID>
+  <Name>F_Balance</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8ade82a5-8ed9-45ea-8eb4-730c156e1a02">
+    <DataSourceViewID>DW_GreenTEC</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="97e7ff31-ff68-4c57-bd96-37c924eb2ffb">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="b3833798-df3b-4b34-b524-b19f3d31370e">
+      <ID>idBalance</ID>
+      <Name>idBalance</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e4e0c90e-f8b3-4cd0-906b-09ec9e9bbf9f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c9cea3c-d23b-49e0-97ec-922d4bea2d0f">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>idBalance</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a60bcd62-d89d-41e1-b088-ac23f04539de">
+          <AttributeID>enterpriseNetIncome</AttributeID>
+          <Name>enterpriseNetIncome</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="92cbfba6-0cda-44d0-9e83-368796f47fb4">
+          <AttributeID>enterpriseCost</AttributeID>
+          <Name>enterpriseCost</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="72f367fb-1280-4d09-9726-ba0bef8cb3b1">
+          <AttributeID>parkAreaDayNetIncome</AttributeID>
+          <Name>parkAreaDayNetIncome</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="687f2e8c-c8a2-447a-8f02-19176a1612e5">
+          <AttributeID>parkMantainanceCost</AttributeID>
+          <Name>parkMantainanceCost</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bfccd80a-4703-448e-8a04-9fbac1562616">
+          <AttributeID>excursionNetIncome</AttributeID>
+          <Name>excursionNetIncome</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="48fd68b3-650a-49e8-a349-19611d4c366b">
+          <AttributeID>excursionCost</AttributeID>
+          <Name>excursionCost</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bfe8c30a-7384-4925-aa44-64210585588e">
+          <AttributeID>employeeExcursionIncome</AttributeID>
+          <Name>employeeExcursionIncome</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="93cb5a40-c97f-4a97-9b24-c94802f1f86a">
+          <AttributeID>employeeAccomodationIncome</AttributeID>
+          <Name>employeeAccomodationIncome</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1ebe30dc-575c-43d3-a25c-d16b9d2b067f">
+          <AttributeID>employeeCost</AttributeID>
+          <Name>employeeCost</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6cf93da5-ca57-4e42-a891-1fd9ff155aca">
+          <AttributeID>idTime</AttributeID>
+          <Name>idTime</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="522879e0-a1be-4a0a-8bfe-40490116f3ca">
+          <AttributeID>idEmployee</AttributeID>
+          <Name>idEmployee</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="83090973-51dd-42b6-b390-3cc42ec23d79">
+          <AttributeID>idExcursion</AttributeID>
+          <Name>idExcursion</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bc94f470-4c16-4f31-b0c0-2996b4f346bb">
+          <AttributeID>idEnterprise</AttributeID>
+          <Name>idEnterprise</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="59bc5303-d9d2-4723-8e8e-624690ed5b61">
+          <AttributeID>idPark</AttributeID>
+          <Name>idPark</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c5a6f368-4b68-4454-a1eb-44ed214f9eee">
+      <ID>enterpriseNetIncome</ID>
+      <Name>enterpriseNetIncome</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ccab9830-b5e7-4708-aa79-1fab698c2202">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="94c87f0a-0b3f-4a04-b02c-46ab420fc443">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>enterpriseNetIncome</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a7267bbc-5ef4-4534-b7b8-4a377704064f">
+      <ID>enterpriseCost</ID>
+      <Name>enterpriseCost</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="06846bbc-3d9b-499d-a88f-00564468db38">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="160a38c5-ef29-4c68-9e28-10d8661e62e4">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>enterpriseCost</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4f39069a-cd4c-463d-9718-0eb7f23eb39c">
+      <ID>parkAreaDayNetIncome</ID>
+      <Name>parkAreaDayNetIncome</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="11a48d33-d085-4da1-bbf9-2ae8359235c5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5a18e104-596f-4067-9321-2b4a0a8a28d2">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>parkAreaDayNetIncome</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="111bb3d3-ceee-4e26-9337-7d0147e0b050">
+      <ID>parkMantainanceCost</ID>
+      <Name>parkMantainanceCost</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f554f955-67e1-4da8-a35f-13a64c8f90fc">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bdd71d68-df27-4f1f-b6d3-f1ff6dfb235e">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>parkMantainanceCost</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a59feee9-b4e1-4721-86c1-2c998127c04f">
+      <ID>excursionNetIncome</ID>
+      <Name>excursionNetIncome</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="631bd638-db0e-4449-bb34-594f35637998">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="46e43587-caf5-4549-9150-c4b41c4b4be5">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>excursionNetIncome</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1f355e46-145f-437f-9b34-f4cc173f7dbf">
+      <ID>excursionCost</ID>
+      <Name>excursionCost</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4d4fac4a-c2bc-4f76-8003-42e4bfc4f493">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4407c80d-bf83-4766-9020-f3991ae7329e">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>excursionCost</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dd8ead93-c900-4306-9a3d-9e83d9a64e95">
+      <ID>employeeExcursionIncome</ID>
+      <Name>employeeExcursionIncome</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a3cfaa44-8e29-40b1-a371-2414fac0329e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="123fa8a2-c783-40a2-9bb7-66f3284b712c">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>employeeExcursionIncome</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0ada80eb-1659-4fc2-a9fc-a56d96f04370">
+      <ID>employeeAccomodationIncome</ID>
+      <Name>employeeAccomodationIncome</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f7b763d5-9309-4c8c-b3da-0974fc38a406">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7fedffce-ae5c-494b-94ff-9582afddebe6">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>employeeAccomodationIncome</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="743d95f7-3207-402d-bd1a-27cb022d22c4">
+      <ID>employeeCost</ID>
+      <Name>employeeCost</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4037e28a-d47d-451a-b0dc-f4360c74ea32">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0e217b44-eecc-4cec-90eb-687af9cf09e4">
+            <TableID>dbo_F_Balance</TableID>
+            <ColumnID>employeeCost</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="31022b2a-d241-4f9e-8c64-4adc383d4a0f">
+      <ID>idTime</ID>
+      <Name>idTime</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1d1b2f4f-fd53-41cd-b0f7-d5781f62aeeb">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b507f902-bcbe-44a5-a34c-faa0d2a25760">
+            <TableID>dbo_D_Time</TableID>
+            <ColumnID>idTime</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8f47727d-6e92-4091-9f55-d543099c005b">
+      <ID>idEmployee</ID>
+      <Name>idEmployee</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6414c9d1-268a-4c22-a8c1-d898e35bc7c2">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f8c3b77b-1c2f-4b8b-8a34-74b15ad25c09">
+            <TableID>dbo_D_Employee</TableID>
+            <ColumnID>idEmployee</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ffccb05c-6170-41a3-8003-44d857604da0">
+      <ID>idExcursion</ID>
+      <Name>idExcursion</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="69e2d5d0-3235-4e53-899c-211771ab523b">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3161c923-3481-43e7-be1f-0daea2a9832a">
+            <TableID>dbo_D_Excursion</TableID>
+            <ColumnID>idExcursion</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e19bbe55-7692-4261-9c72-339d9b8c36c0">
+      <ID>idEnterprise</ID>
+      <Name>idEnterprise</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3f41f922-4758-4462-b726-3a855fd52024">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a06c4b5e-bbab-4221-a8ea-42e4238a2c5d">
+            <TableID>dbo_D_Enterprise</TableID>
+            <ColumnID>idEnterprise</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e1ec84e7-a374-4ecb-9e36-08a249bcb501">
+      <ID>idPark</ID>
+      <Name>idPark</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="28377b49-b2ad-4256-ad62-802dc4d008ed">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="40eaee8c-2c47-4201-95e1-e02293bcdb7d">
+            <TableID>dbo_D_Park</TableID>
+            <ColumnID>idPark</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Project3_Cube</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>LO4NmF3NJXj+NlYWSn/P9bfLhys=11/22/2018 1:37:20 AM11/21/2018 10:26:25 PM</TimeStamp>
+        <ID>
+          <String>DW_GreenTEC</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>96cY1+8f2sP9ca9eU8M6a+OEFsw=11/21/2018 10:27:43 PM11/21/2018 10:26:42 PM</TimeStamp>
+        <ID>
+          <String>DW_GreenTEC</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>oab/KiWeRoFLTKf5+Akd+gRPHR4=11/21/2018 10:27:43 PM11/21/2018 10:27:43 PM</TimeStamp>
+        <ID>
+          <String>D_Employee</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>MCU7sdiVZuzk3YyZF8MrQrIUu18=11/21/2018 10:28:20 PM11/21/2018 10:28:20 PM</TimeStamp>
+        <ID>
+          <String>D_Enterprise</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>IMu4wdIIB9foe6Q/4Ffo/wcoMbQ=11/21/2018 10:28:45 PM11/21/2018 10:28:45 PM</TimeStamp>
+        <ID>
+          <String>D_Excursion</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>TKrAnvMWSrq/zzhiMci63U8M1mw=11/21/2018 10:29:18 PM11/21/2018 10:29:18 PM</TimeStamp>
+        <ID>
+          <String>D_Park</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>YfV2Sr0VU7VuVJq0r8jOeKP/+vI=11/21/2018 10:29:59 PM11/21/2018 10:29:59 PM</TimeStamp>
+        <ID>
+          <String>D_Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Oej+Ji9srnv08wSggOCn8vm7W9Q=11/21/2018 10:31:49 PM11/21/2018 10:31:49 PM</TimeStamp>
+        <ID>
+          <String>F_Balance</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>hIZh3AUZxCS51Z8/zey+LUC9e0s=11/21/2018 10:32:37 PM11/21/2018 10:32:37 PMHIMpD2LK6iRCFqp2lJBnqR2fE5Q=11/21/2018 10:32:37 PM11/21/2018 10:32:37 PM</TimeStamp>
+        <ID>
+          <String>DW_GreenTEC</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>azdnBsHm2dCNB/MGfehUYTqV9QU=11/21/2018 10:25:57 PM11/21/2018 10:25:57 PM</TimeStamp>
+      <ID>
+        <String>Project3_Cube</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2018-11-23T03:17:05.21Z</LastDeployed>
+</DeploymentSnapshot>

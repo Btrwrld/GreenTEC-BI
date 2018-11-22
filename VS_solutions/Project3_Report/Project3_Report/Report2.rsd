@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>RS_GreenTEC</DataSourceReference>
+      <CommandText> SELECT { [Measures].[Park Area Day Net Income], [Measures].[Park Mantainance Cost], [Measures].[Excursion Net Income] } ON COLUMNS, { ([D_Park].[area].[area].ALLMEMBERS * [D_Time].[year].[year].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [D_Time].[year].&amp;[2012], [D_Time].[year].&amp;[2013], [D_Time].[year].&amp;[2015], [D_Time].[year].&amp;[2014], [D_Time].[year].&amp;[2017], [D_Time].[year].&amp;[2018], [D_Time].[year].&amp;[2016] } ) ON COLUMNS FROM ( SELECT ( { [D_Park].[area].&amp;[Este], [D_Park].[area].&amp;[Norte], [D_Park].[area].&amp;[Sur] } ) ON COLUMNS FROM [DW_GreenTEC])) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>MDX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>D_Park</DimensionName>
+                    <HierarchyName>area</HierarchyName>
+                    <HierarchyUniqueName>[D_Park].[area]</HierarchyUniqueName>
+                    <LevelName>area</LevelName>
+                    <UniqueName>[D_Park].[area].[area]</UniqueName>
+                  </ID>
+                  <ItemCaption>area</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>D_Time</DimensionName>
+                    <HierarchyName>year</HierarchyName>
+                    <HierarchyUniqueName>[D_Time].[year]</HierarchyUniqueName>
+                    <LevelName>year</LevelName>
+                    <UniqueName>[D_Time].[year].[year]</UniqueName>
+                  </ID>
+                  <ItemCaption>year</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Park Area Day Net Income</MeasureName>
+                    <UniqueName>[Measures].[Park Area Day Net Income]</UniqueName>
+                  </ID>
+                  <ItemCaption>Park Area Day Net Income</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Park Mantainance Cost</MeasureName>
+                    <UniqueName>[Measures].[Park Mantainance Cost]</UniqueName>
+                  </ID>
+                  <ItemCaption>Park Mantainance Cost</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Excursion Net Income</MeasureName>
+                    <UniqueName>[Measures].[Excursion Net Income]</UniqueName>
+                  </ID>
+                  <ItemCaption>Excursion Net Income</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>true</AutoExecute>
+            <From>DW_GreenTEC</From>
+            <Filter>
+              <FilterItems>
+                <FilterItem>
+                  <HierarchyUniqueName>[D_Park].[area]</HierarchyUniqueName>
+                  <Condition xsi:type="EqualTo">
+                    <Members>
+                      <Member>
+                        <MemberUniqueName>[D_Park].[area].&amp;[Este]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[D_Park].[area].&amp;[Norte]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[D_Park].[area].&amp;[Sur]</MemberUniqueName>
+                      </Member>
+                    </Members>
+                  </Condition>
+                </FilterItem>
+                <FilterItem>
+                  <HierarchyUniqueName>[D_Time].[year]</HierarchyUniqueName>
+                  <Condition xsi:type="EqualTo">
+                    <Members>
+                      <Member>
+                        <MemberUniqueName>[D_Time].[year].&amp;[2012]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[D_Time].[year].&amp;[2013]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[D_Time].[year].&amp;[2015]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[D_Time].[year].&amp;[2014]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[D_Time].[year].&amp;[2017]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[D_Time].[year].&amp;[2018]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[D_Time].[year].&amp;[2016]</MemberUniqueName>
+                      </Member>
+                    </Members>
+                  </Condition>
+                </FilterItem>
+              </FilterItems>
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeEmptyData>true</IncludeEmptyData>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement> SELECT { [Measures].[Park Area Day Net Income], [Measures].[Park Mantainance Cost], [Measures].[Excursion Net Income] } ON COLUMNS, { ([D_Park].[area].[area].ALLMEMBERS * [D_Time].[year].[year].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [D_Time].[year].&amp;[2012], [D_Time].[year].&amp;[2013], [D_Time].[year].&amp;[2015], [D_Time].[year].&amp;[2014], [D_Time].[year].&amp;[2017], [D_Time].[year].&amp;[2018], [D_Time].[year].&amp;[2016] } ) ON COLUMNS FROM ( SELECT ( { [D_Park].[area].&amp;[Este], [D_Park].[area].&amp;[Norte], [D_Park].[area].&amp;[Sur] } ) ON COLUMNS FROM [DW_GreenTEC])) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="area">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[D_Park].[area].[area]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="year">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[D_Time].[year].[year]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Park_Area_Day_Net_Income">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Park Area Day Net Income]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Park_Mantainance_Cost">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Park Mantainance Cost]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Excursion_Net_Income">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Excursion Net Income]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
