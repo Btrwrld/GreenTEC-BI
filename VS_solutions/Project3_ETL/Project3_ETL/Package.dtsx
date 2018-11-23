@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{77F69EE0-8368-4024-8F29-5215286217FB}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{47BAE263-FC0F-4767-ADBA-E4F6BFF50274}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -6652,38 +6652,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Clean"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{6A48315D-2B3E-4687-B2E9-F0C836F193B9}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Clean"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{177A8267-3D2C-4B58-B3FC-842C7AD25BF3}"
-          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE table_name = 'F_Balance')&#xA;DROP TABLE dbo.F_Balance&#xA;GO&#xA;TRUNCATE TABLE D_Park&#xA;TRUNCATE TABLE D_Time&#xA;TRUNCATE TABLE D_Employee&#xA;TRUNCATE TABLE D_Excursion&#xA;TRUNCATE TABLE D_Enterprise" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Create"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{95F32D22-50C3-464B-B6CF-F66EE3B51B05}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Create"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{177A8267-3D2C-4B58-B3FC-842C7AD25BF3}"
-          SQLTask:SqlStatementSource="USE [DW_GreenTEC]&#xA;GO&#xA;&#xA;/****** Object:  Table [dbo].[F_Balance]    Script Date: 11/22/2018 1:43:21 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[F_Balance](&#xA;&#x9;[idBalance] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[fk_idTime] [int] NULL,&#xA;&#x9;[fk_idExcursion] [int] NULL,&#xA;&#x9;[fk_idEmployee] [int] NULL,&#xA;&#x9;[fk_idPark] [int] NULL,&#xA;&#x9;[fk_idEnterprise] [int] NULL,&#xA;&#x9;[enterpriseNetIncome] [int] NULL,&#xA;&#x9;[enterpriseCost] [int] NULL,&#xA;&#x9;[parkAreaDayNetIncome] [int] NULL,&#xA;&#x9;[parkMantainanceCost] [int] NULL,&#xA;&#x9;[excursionNetIncome] [int] NULL,&#xA;&#x9;[excursionCost] [int] NULL,&#xA;&#x9;[employeeExcursionIncome] [int] NULL,&#xA;&#x9;[employeeAccomodationIncome] [int] NULL,&#xA;&#x9;[employeeCost] [int] NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[idBalance] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_Balance]  WITH CHECK ADD FOREIGN KEY([fk_idTime])&#xA;REFERENCES [dbo].[D_Time] ([idTime])&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_Balance]  WITH CHECK ADD FOREIGN KEY([fk_idExcursion])&#xA;REFERENCES [dbo].[D_Excursion] ([idExcursion])&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_Balance]  WITH CHECK ADD FOREIGN KEY([fk_idEmployee])&#xA;REFERENCES [dbo].[D_Employee] ([idEmployee])&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_Balance]  WITH CHECK ADD FOREIGN KEY([fk_idPark])&#xA;REFERENCES [dbo].[D_Park] ([idPark])&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_Balance]  WITH CHECK ADD FOREIGN KEY([fk_idEnterprise])&#xA;REFERENCES [dbo].[D_Enterprise] ([idEnterprise])&#xA;GO&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -6710,22 +6678,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\Add time" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
-      DTS:CreationName=""
-      DTS:DTSID="{AA9D996C-5BF1-478D-AB5A-6B502127E9FF}"
-      DTS:From="Package\Clean"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 3"
-      DTS:To="Package\Create" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
-      DTS:CreationName=""
-      DTS:DTSID="{1CAED01E-D1FF-477A-AFF5-0BB2FD33BF27}"
-      DTS:From="Package\Create"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 4"
-      DTS:To="Package\Add park" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
       DTS:CreationName=""
@@ -6815,14 +6767,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Size="121,42"
           Id="Package\Add time"
           TopLeft="364,334" />
-        <NodeLayout
-          Size="105,42"
-          Id="Package\Clean"
-          TopLeft="430,34" />
-        <NodeLayout
-          Size="110,42"
-          Id="Package\Create"
-          TopLeft="291,75" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="187.5,139">
@@ -6917,74 +6861,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     Point3="49.5,19.5" />
                   <mssgle:LineSegment
                     End="49.5,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="430,55">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-29,41"
-              Start="0,0"
-              End="-21.5,41">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-10.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-10.5,0"
-                    Point2="-14.5,0"
-                    Point3="-14.5,4" />
-                  <mssgle:LineSegment
-                    End="-14.5,37" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14.5,37"
-                    Point2="-14.5,41"
-                    Point3="-18.5,41" />
-                  <mssgle:LineSegment
-                    End="-21.5,41" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="291,96">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-43,22"
-              Start="0,0"
-              End="-35.5,22">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-17.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.5,0"
-                    Point2="-21.5,0"
-                    Point3="-21.5,4" />
-                  <mssgle:LineSegment
-                    End="-21.5,18" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.5,18"
-                    Point2="-21.5,22"
-                    Point3="-25.5,22" />
-                  <mssgle:LineSegment
-                    End="-35.5,22" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
